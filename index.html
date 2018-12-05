@@ -4,8 +4,7 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Text Compression</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="http://devoresyah.github.io/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script src="https://unpkg.com/iview@3.1.5/dist/iview.min.js"></script>
   <script src="https://rawcdn.githack.com/pieroxy/lz-string/9513b1cdbb00ce029f545c2ed23f0fff4137fd8c/libs/lz-string.min.js"></script>
@@ -72,13 +71,18 @@
                                 <i-col span="12">
                                     <i-form label-position="top">
                                         <form-item label="Masukkan Teks">
-                                            <i-input
+                                            <i-input id="filecontents"
                                                 v-model="text"
                                                 type="textarea"
                                                 :autosize="{minRows: 4}"
                                                 placeholder="Masukkan teks yang ingin dikompres..."
                                             />
                                         </form-item>
+					<i-col span="24">
+   				 	<upload action="https://jsonplaceholder.typicode.com/posts/">
+        				<i-button id="fileSave" icon="ios-cloud-upload-outline" long @click="fileSave()">Upload files</button>
+    					</upload>
+					</i-col>
                                         <code style="float:right">Karakter: {{ text.length }}</code>
                                     </i-form>
                                 </i-col>
@@ -99,13 +103,12 @@
 
                             <row style="margin-top:30px">
                                 <i-col span="8" offset="8">
-                                    <row :gutter="10">
+				<row :gutter="10">
                                         <i-col span="12">
                                             <i-button type="success" :loading="loading" long @click="onCompress()">Compress</i-button>
                                         </i-col>
-
                                         <i-col span="12">
-                                                <i-button id="saveBtn" type="primary" :loading="loading2" long @click="onSave()">Save</i-button>
+                                             <i-button id="saveBtn" type="primary" :loading="loading2" long @click="onSave()">Save</i-button>
                                         </i-col>
                                     </row>
                                 </i-col>
@@ -160,9 +163,36 @@
   		var blob = new Blob([ output ], {type: "text/plain;charset=utf-8"});
   		saveAs(blob, "TextCompressed.txt");
                 this.$Message.info('File berhasil disimpan...');
-                }
+                },
+		document.getElementById('fileSave')
+  		.addEventListener('change', getFile)
+
+		function getFile(event) {
+		const input = event.target
+  		if ('files' in input && input.files.length > 0) {
+	 	placeFileContent(
+      		document.getElementById('filecontents'),
+      		input.files[0])
+  		}
+	}
+
+		function placeFileContent(target, file) {
+		readFileContent(file).then(content => {
+  		target.value = content
+  		}).catch(error => console.log(error))
+	}
+
+		function readFileContent(file) {
+		const reader = new FileReader()
+ 		return new Promise((resolve, reject) => {
+    		reader.onload = event => resolve(event.target.result)
+   		reader.onerror = error => reject(error)
+   		reader.readAsText(file)
+ 		 })
+		}
+		}
             }
-        })
+	})
     //]]>
   </script>
 </body>
