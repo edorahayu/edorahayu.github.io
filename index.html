@@ -1,190 +1,168 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrFome=1" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-    <title>
- Libraries - Edo Rahayu</title>
-    <meta name="author" content="Edo">
-    <meta name="robots" content="no-cache">
-    <meta name="description" content="I am the developer in the Server, DNS Server, Web Server, Mail Server, CodeIgniter, PHP, CSS, HTML, JavaScript, jQuery, framework frontend, git, github, bitbucket, heroku, etc.">
-    <meta name="keywords" content="Edo Rahayu, Cahyadi Triyansyah, DeVoresyah, Server, Github, CodeIgniter, Semantic-UI, CSS, HTML, JavaScript, jQuery">
-    <link rel="icon" href="http://sundi3yansyah.herokuapp.com/favicon.png">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="http://sundi3yansyah.herokuapp.com/bower_components/Semantic-UI/dist/semantic.min.css">
-    <link rel="stylesheet" href="http://sundi3yansyah.herokuapp.com/bower_components/Semantic-UI/examples/homepage.css">
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="http://sundi3yansyah.herokuapp.com/bower_components/Semantic-UI/dist/semantic.min.js"></script>  
-    <script src="http://sundi3yansyah.herokuapp.com/bower_components/Semantic-UI/examples/homepage.js"></script>
-    <script src="http://sundi3yansyah.herokuapp.com/bower_components/typed.js/dist/typed.min.js"></script>
-    <script>
-    $(function(){
-    $(".about").typed({
-    strings: ["Hello World...!^1500", "My name is Edo Rahayu from Indonesia.^1000 \nI am part of the developer in the server such as DNS Server,^800 Web Server,^600 Mail Server, \nand so forth.^1000 While the website using CodeIgniter to prioritize current and most are \nnative PHP.^1000 \nTo the Client Side I thrive in almost all layers are CSS,^500 HTML,^500 JavaScript including \njQuery^800 and various frontend like twitter bootstrap framework.^1000 \nIn addition I often indulge in github to learn from it as code for my home."],
-    typeSpeed: 30,
-    backDelay: 500,
-    loop: false,
-    loopCount: false,
-    });
-    });
-    </script>
-  </head>
-  <style>
-  #home .masthead .information{margin: 4em 120px 1em 120px !important;}
-  </style>
-  <body id="home">
-    <div class="ui inverted masthead segment force">
-      <div class="ui page grid">
-        <div class="column">
-          <div class="ui inverted menu">
-            <a class="header item" href="http://edorahayu.github.io/"><i class="fa fa-code"></i> Libraries | Edo Rahayu</a>
-            <div class="right menu">
-              <div class="ui mobile dropdown link item">
-                Menu
-                <i class="fa fa-chevron-down"></i>
-                <div class="menu">
-                  <a class="item" href="mailto:e.dorahayu07@gmail.com" target="_blank">Email</a>
-                  <a class="item" href="https://plus.google.com/+DiCariIn" target="_blank">GitHub</a>
-                  <a class="item" href="#" target="_blank">Twitter</a>
-                  <a class="item" href="https://plus.google.com/109605533246766421664" target="_blank">Google+</a>
-                  <a class="item" href="https://www.linkedin.com/profile/view?id=AAIAABlZa2kBXsC7o-SfQpksf11V8Dobscuu4FM&trk=nav_responsive_tab_profile_pic" target="_blank">LinkedIn</a>
-                  <a class="item" href="https://www.facebook.com/edorahayu.id" target="_blank">Facebook</a>
-                </div>
-              </div>
-              <a class="item" href="mailto:e.dorahayu07@gmail.com" target="_blank"><i class="fa fa-envelope"></i> Email</a>
-              <a class="item" href="https://plus.google.com/+DiCariIn" target="_blank"><i class="fa fa-github-square"></i> GitHub</a>
-              <a class="item" href="#" target="_blank"><i class="fa fa-twitter-square"></i> Twitter</a>
-              <a class="item" href="https://plus.google.com/109605533246766421664" target="_blank"><i class="fa fa-google-plus-square"></i> Google+</a>
-              <a class="item" href="https://www.linkedin.com/profile/view?id=AAIAABlZa2kBXsC7o-SfQpksf11V8Dobscuu4FM&trk=nav_responsive_tab_profile_pic" target="_blank"><i class="fa fa-linkedin-square"></i> LinkedIn</a>
-              <a class="item" href="https://www.facebook.com/edorahayu.id" target="_blank"><i class="fa fa-facebook-square"></i> Facebook</a>
-            </div>
-          </div>
-          <div class="ui hidden transition information force">
-            <h1 class="none ui inverted header">
-            DeVoresyah        </h1>
-            <div class="text-editor-wrap">
-              <div class="title-bar"><span class="title">r00t@Edo Rahayu</span></div>
-              <div class="text-body">
-                $ # <p class="about" style="display: inline;white-space: pre;"></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="ui purple inverted vertical segment">
-      <div class="ui stackable center aligned page grid">
-        <div class="row">
-          <div class="column">
-            <h1 class="ui inverted header">
-            Ajax List Repository on GitHub
-            </h1>
-            <div class="ui inverted horizontal divider"><i class="fa fa-github-square" style="font-size:5em;"></i></div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="nine wide column left aligned">
-            <div class="ui center aligned stackable page grid">
-              <button class="get_repos ui teal massive left labeled icon button cmd"><i class="fa fa-github"></i> Get Repository with Ajax</button><br>
-              <div class="ui pointing below green" id="repos_count" style="margin-top: 0.5em;"></div>
-            </div>
-            <div class="ui styled fluid accordion" id="repo_list" style="box-shadow: none;margin-top: 1em;">
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="ui grey inverted vertical segment">
-      <div class="ui stackable center aligned page grid">
-        <div class="row">
-          <div class="column">
-            <h1 class="ui center aligned inverted header">
-            Articles
-            </h1>
-            <div class="ui inverted horizontal divider"><i class="fa fa-github-square" style="font-size:5em;"></i></div>
-          </div>
-        </div>
-                <div class="row">
-          <div class="twelve wide column">
-    
-            <div class="ui segment divided items left aligned">
-              <div class="item">
-                <div class="content">
-                  <h3><a href="/article/2015/10/18/membuat-countdown-timer-dengan-jquery.html" class="header">Membuat Countdown Timer Dengan jQuery</a></h3>
-                  <div class="meta">
-                    <div class="cinema"><i class="fa fa-calendar"></i> 18 Oct 2015 <i class="fa fa-clock-o"></i> 17:30</div>
-                  </div>
-                  <div class="ui horizontal divider"><i class="fa fa-github-square" style="font-size: 2em;"></i></div>
-                  <div class="description">
-                    <p><p><img class="ui centered big image" src="http://devoresyah.github.io/img/article/countdown-timer-with-jquery.png" /></p>
-<p>Sudah tidak asing lagi dengan jQuery, yang membantu programmer untuk menggunakan fungsi javascript dengan mudah. Kali ini saya ingin membagikan tutorial untuk membuat <b>waktu hitung mundur</b> menggunakan jQuery. Countdown timer biasanya digunakan pada situs-situs berbagi file yang mengharuskan pengunjungnya menunggu beberapa detik sebelum dapat mengunduh file yang diinginkan, dan masih banyak hal lain yang dapat dilakukan dengan countdown timer ini.</p>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Text Compression</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/iview@3.1.5/dist/iview.min.js"></script>
+  <script src="https://rawcdn.githack.com/pieroxy/lz-string/9513b1cdbb00ce029f545c2ed23f0fff4137fd8c/libs/lz-string.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/eligrey/FileSaver.js/src/FileSaver.js"></script>
 
-</p>
-                  </div>
-                  <div class="extra">
-                    <a href="/article/2015/10/18/membuat-countdown-timer-dengan-jquery.html" class="ui right floated primary button">
-                      Read More <i class="fa fa-chevron-right"></i>
-                    </a>
-                    
-                    <div class="ui label"><i class="fa fa-tag"></i> jQuery</div>
-                    
-                    <div class="ui label"><i class="fa fa-tag"></i> Javascript</div>
-                    
-                  </div>
-                </div>
-              </div>
-            </div>
-    
-    <a class="huge ui blue button" href="#" target="_blank">See All Articles <i class="fa fa-chevron-right"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <script>
-    $(".get_repos").click(function() {
-    $.ajax({
-    type: "GET",
-    url: "https://api.github.com/users/DeVoresyah/repos",
-    dataType: "json",
-    success: function(result) {
-    for( i in result ) {
-    $("#repo_list").append(
-    "<div class='title'><i class='dropdown icon'></i>" + result[i].name + "<p class='ui blue tag label' style='float: right;'>" + result[i].language + "</p></div><div class='content'><p>" + result[i].description + "</p><p class='ui label purple'><i class='fa fa-code-fork'></i> " + result[i].forks_count + "</p><p class='ui label purple'><i class='fa fa-star'></i> " + result[i].stargazers_count + "</p><div class='ui mini labeled input' style='width:100%;margin-top:1em;'><div class='ui label'><i class='fa fa-lock' style='color:#5bbd72;'> https://</i></div><input type='text' value='github.com/" + result[i].full_name + "'></div></div>"
-    );
-    // For debug result by ID
-    // console.log("i: " + i);
+  <style>
+    @import url("https://unpkg.com/iview/dist/styles/iview.css");
+    .layout{
+        background: #f5f7f9;
     }
-    console.log(result);
-    $('.cmd').removeClass('loading');
-    $('.cmd').addClass('disabled');
-    $('.ui.pointing.green').addClass('label');
-    $("#repos_count").append("Total " + result.length + " Repository");
+    .layout-logo{
+        width: 100px;
+        height: 30px;
+        background: #5b6270;
+        border-radius: 3px;
+        float: left;
+        position: relative;
+        top: 15px;
+        left: 20px;
     }
-    });
-    $('.cmd').addClass('loading');
-    });
-    </script>
-    <div class="ui vertical feature segment" style="box-shadow: none;">
-      <div class="ui center aligned stackable page grid">
-        <div class="two center floated column row">
-          <div class="ui wide column">
-            <div class="ui horizontal divider"><i class="fa fa-github-alt" style="font-size:5em;"></i></div>
-            <a class="huge ui blue button" href="http://edorahayu.github.io/" target="_blank"><i class="fa fa-github"></i> Fork this Repository</a>
-          </div>
+    .layout-nav{
+        width: auto;
+        float: right;
+    }
+    .layout-footer-center{
+        text-align: center;
+    }
+    code {
+        display: inline-block;
+        background: #f7f7f7;
+        font-family: Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;
+        margin: 0 3px;
+        padding: 1px 5px;
+        border-radius: 3px;
+        color: #666;
+        border: 1px solid #eee;
+    }
+  </style>
+</head>
+<body>
+
+    <div id="vueApp">
+        <div class="layout">
+            <layout>
+                <i-header>
+                    <i-menu mode="horizontal" theme="dark" active-name="1">
+                        <div class="layout-logo"></div>
+                        <div class="layout-nav">
+                            <menu-item name="1">
+                                <icon type="ios-color-wand"></icon>
+                                Compress Text
+                            </menu-item>
+                        </div>
+                    </i-menu>
+                </i-header>
+                <i-content :style="{padding: '60px 50px'}">
+                    <breadcrumb :style="{margin: '20px 0'}">
+                        <breadcrumb-item>Home</breadcrumb-item>
+                        <breadcrumb-item>Compression Tools</breadcrumb-item>
+                    </breadcrumb>
+                    <card>
+                        <div style="min-height: 200px;">
+                            <row :gutter="10">
+                                <i-col span="12">
+                                    <i-form label-position="top">
+                                        <form-item label="Masukkan Teks">
+                                            <i-input
+                                                v-model="text"
+                                                type="textarea"
+                                                :autosize="{minRows: 4}"
+                                                placeholder="Masukkan teks yang ingin dikompres..."
+                                            />
+                                        </form-item>
+                                        <code style="float:right">Karakter: {{ text.length }}</code>
+                                    </i-form>
+                                </i-col>
+                                <i-col span="12">
+                                    <i-form label-position="top">
+                                            <form-item label="Hasil">
+                                                <i-input
+                                                    disabled
+                                                    v-model="textCompressed"
+                                                    type="textarea"
+                                                    :rows="4"
+                                                />
+                                            </form-item>
+                                            <code style="float:right">Karakter: {{ textCompressed.length }}</code>
+                                        </i-form>
+                                </i-col>
+                            </row>
+
+                            <row style="margin-top:30px">
+                                <i-col span="8" offset="8">
+                                    <row :gutter="10">
+                                        <i-col span="12">
+                                            <i-button type="success" :loading="loading" long @click="onCompress()">Compress</i-button>
+                                        </i-col>
+
+                                        <i-col span="12">
+                                                <i-button id="saveBtn" type="primary" :loading="loading2" long @click="onSave()">Save</i-button>
+                                        </i-col>
+                                    </row>
+                                </i-col>
+                            </row>
+                        </div>
+                    </card>
+                </i-content>
+                <i-footer class="layout-footer-center" style="margin-bottom: 50px; margin-top:30px">2018 &copy; All right reserved.</i-footer>
+            </layout>
         </div>
-      </div>
     </div>
-    <div class="ui inverted black footer vertical segment">
-      <div class="ui stackable center aligned page grid">
-        <div class="one column row">
-          <div class="column">
-            <div class="column left aligned">
-            <p style="font-size: 1.2em;">© 2015 - All Right Reserved</p>
-          </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </body>
+
+  <script>
+    //<!CDATA[
+        Vue.use(iview)
+
+        new Vue({
+            el: "#vueApp",
+            data: {
+                text: "",
+                textCompressed: "",
+                loading: false,
+                loading2: false
+            },
+            methods: {
+                onCompress: function() {
+                    this.loading = true;
+                    const str = this.text;
+                    
+                    if (str.length == 0) {
+                        this.$Message.warning('Harap masukkan teks yang akan dikompres');
+                        this.loading = false;
+                        return;
+                    }
+
+                    var output = '';
+                    var count = 0;
+                    for (var i = 0; i < str.length; i++) {
+                        count++;
+                        if (str[i] != str[i+1]) {
+                            output += str[i] + count;
+                            count = 0;
+                        }
+                    }
+
+                    this.$Message.success('Teks berhasil dikompress')
+                    this.textCompressed = output
+                    this.loading = false
+                },
+		onSave: function() {
+		var output = this.textCompressed;
+  		var blob = new Blob([ output ], {type: "text/plain;charset=utf-8"});
+  		saveAs(blob, "TextCompressed.txt");
+                this.$Message.info('File berhasil disimpan...');
+                }
+            }
+        })
+    //]]>
+  </script>
+</body>
 </html>
