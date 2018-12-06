@@ -80,8 +80,8 @@
                                             />
                                         </form-item>
 					<i-col span="24">
-   				 	<upload action="https://jsonplaceholder.typicode.com/posts/">
-        				<i-button id="fileSave" icon="ios-cloud-upload-outline" long @click="fileSave()">Upload files</button>
+   				 	<upload action="https://jsonplaceholder.typicode.com/posts/" ref="upload" :before-upload="readFile" :on-success="clearFiles">
+        				<i-button id="fileSave" icon="ios-cloud-upload-outline" long>Upload files</button>
     					</upload>
 					</i-col>
                                         <code style="float:right">Karakter: {{ text.length }}</code>
@@ -109,7 +109,8 @@
                                             <i-button type="success" :loading="loading" long @click="onCompress()">Compress</i-button>
                                         </i-col>
                                         <i-col span="12">
-                                             <i-button id="saveBtn" type="primary" :loading="loading2" long @click="onSave()">Save</i-button>
+                                             <i-button id="saveBtn" type="primary" :loading="loading2" long @click="onSave()" v-if="isCompressed == true">Save</i-button>
+                                             <i-button type="primary" long disabled v-else>Save</i-button>
                                         </i-col>
                                     </row>
                                 </i-col>
@@ -132,7 +133,9 @@
                 text: "",
                 textCompressed: "",
                 loading: false,
-                loading2: false
+                loading2: false,
+                isCompressed: false,
+                file: null
             },
             methods: {
                 onCompress: function() {
@@ -158,6 +161,7 @@
                     this.$Message.success('Teks berhasil dikompress')
                     this.textCompressed = output
                     this.loading = false
+                    this.isCompressed = true
                 },
 		onSave: function() {
 		var output = this.textCompressed;
@@ -165,35 +169,20 @@
   		saveAs(blob, "TextCompressed.txt");
                 this.$Message.info('File berhasil disimpan...');
                 },
-		
-		fileSave: function () {
-		document.getElementById('fileSave')
-  		.addEventListener('change', getFile)
+                readFile: function(file) {
+                    const vm = this;
+                    this.file = file;
 
-		function getFile(event) {
-		const input = event.target
-  		if ('files' in input && input.files.length > 0) {
-	 	placeFileContent(
-      		document.getElementById('filecontents'),
-      		input.files[0])
-  		}
-	}
+                    let reader = new FileReader();
+                    reader.readAsText(this.file);
 
-		function placeFileContent(target, file) {
-		readFileContent(file).then(content => {
-  		target.value = content
-  		}).catch(error => console.log(error))
-	}
-
-		function readFileContent(file) {
-		const reader = new FileReader()
- 		return new Promise((resolve, reject) => {
-    		reader.onload = event => resolve(event.target.result)
-   		reader.onerror = error => reject(error)
-   		reader.readAsText(file)
- 		 })
-		}
-		}
+                    reader.onload = () => {
+                        vm.text = reader.result
+                    }
+                },
+                clearFiles: function() {
+                    this.$refs.upload.fileList = []
+                }
             }
 	})
     //]]>
