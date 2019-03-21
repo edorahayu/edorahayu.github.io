@@ -1,0 +1,305 @@
+/*
+ ____              ____  _ _____                                   _     
+/ ___| _   _ _ __ |  _ \(_)___ / _   _  __ _ _ __  ___ _   _  __ _| |__  
+\___ \| | | | '_ \| | | | | |_ \| | | |/ _` | '_ \/ __| | | |/ _` | '_ \ 
+ ___) | |_| | | | | |_| | |___) | |_| | (_| | | | \__ \ |_| | (_| | | | |
+|____/ \__,_|_| |_|____/|_|____/ \__, |\__,_|_| |_|___/\__, |\__,_|_| |_|
+                                 |___/                 |___/             
+
+|--------------------------------------------------------------------------
+|              IMPORTANT! CSS has been doing a lot of change
+|--------------------------------------------------------------------------
+                                                                         */
+
+/*******************************
+            Global
+*******************************/
+
+html {
+  font-size: 14px;
+}
+
+.none {
+  display: none !important;
+}
+
+/*******************************
+            Global
+*******************************/
+#home .menu .right.menu > .mobile.item {
+  display: none;
+}
+
+/*--------------
+    Masthead
+---------------*/
+#home .ui.inverted.segment.force {
+  position: relative;
+  overflow: visible;
+  text-align: center;
+  margin-bottom: 0px;
+  border-bottom: none;
+
+  background-color: #009189 !important;
+  background-image: radial-gradient(farthest-corner, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));
+  background-position: 50% 50%;
+  /*-webkit-transform: translate3d(0, 0, 0);*/
+  /*transform: translate3d(0, 0, 0);*/
+
+  -ms-transition: background-color 3s ease-in-out 1s;
+  -moz-transition: background-color 3s ease-in-out 1s;
+  -webkit-transition: background-color 3s ease-in-out 1s;
+  transition: background-color 3s ease-in-out 1s;
+}
+
+/*background-image: url(/bower_components/Semantic-UI/examples/images/anon.jpg);*/
+#home .masthead {
+  
+  margin: 0em;
+  /*padding: 5rem 0rem;*/
+  padding: 3rem 0rem;
+}
+#home .masthead .column {
+  position: relative;
+}
+#home .masthead .information {
+  /*margin: 10em 1em 1em 350px;*/
+  margin: 5em 1em 1em 350px;
+}
+#home .masthead .information p {
+  /*max-width: 600px;*/
+  font-size: 1.3em;
+}
+#home .masthead .image {
+  position: absolute;
+  left: 0%;
+  bottom: -110px;
+}
+#home .masthead i.icon.code {
+  position: absolute;
+  left: 1%;
+  font-size: 15em;
+  top: 0.5em;
+}
+#home .masthead i.icon.code.force {
+  font-size: 20em;
+}
+
+/*--------------
+    Ribbons
+---------------*/
+#home .segment h1 {
+  font-size: 3em;
+  margin-bottom: 1em;
+}
+
+#home .vertical.segment {
+  /*padding: 12rem 0rem;*/
+  padding: 6rem 0rem;
+}
+
+#home .feature.segment {
+  margin: 0em;
+  padding: 6rem 0rem;
+}
+#home .feature.segment p {
+  min-height: 50px;
+}
+
+#home .selection.list {
+  margin: 0em -0.5em;
+}
+
+#home .logo.row {
+  height: 10rem;
+}
+
+/*--------------
+    Footer
+---------------*/
+#home .footer.segment {
+  background-color: #000000;
+  padding: 3rem 0rem;
+}
+
+/*******************************
+          Responsive
+*******************************/
+/* Mobile Only */
+@media only screen and (max-width : 768px) {
+
+  #home .menu .right.menu > .item {
+    display: none;
+  }
+
+  #home .menu .right.menu > .mobile.item {
+    display: block;
+  }
+  #home .menu .right.menu > .mobile.item .menu {
+    left: auto;
+    right: 0em;
+  }
+
+  #home h1 {
+    font-size: 1.5em;
+  }
+  #home .masthead.segment .information {
+    margin-left: 170px;
+  }
+
+  #home .masthead.segment .image {
+    width: 170px;
+  }
+
+  #home .masthead.segment .button {
+    font-size: 1rem;
+  }
+
+  #home .overview .divided.grid .header .icon {
+    font-size: 1.5em;
+  }
+
+  #home .overview .divided.grid .header + p {
+    min-height: 0px;
+  }
+
+  #home .masthead.segment .column {
+    font-size: 0.7rem;
+  }
+
+  #home .masthead.segment .column p {
+    display: none;
+  }
+
+  #home .selection.list .right.floated {
+    display: none;
+  }
+}
+
+.ui.accordion p {
+  color: rgba(0, 0, 0, 0.8);
+}
+
+@media only screen and (max-width: 768px) {
+  #home .masthead i.icon.code.force {
+    display: none;
+  }
+}
+@media only screen and (max-width : 768px) {
+  #home .masthead.segment .information.force {
+    /*margin-left: 170px;*/
+    margin: 0;
+  }
+}
+.text-editor-wrap {
+  color: #1b1c1d;
+  display: block;
+  margin: auto;
+  /*max-width: 530px;*/
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.8) 0px 20px 70px;
+  clear: both;
+  overflow: hidden;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -ms-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out; }
+
+.title-bar {
+  padding: 5px 0;
+  font-family: "Lucida Grande", sans-serif;
+  font-size: 0.75em;
+  text-align: center;
+  text-shadow: rgba(255, 255, 255, 0.8) 0px 1px 0px;
+  background-color: #f8f8f8 !important;
+  background-image: -webkit-linear-gradient(top, #e8e8e8, #bcbbbc);
+  background-image: -moz-linear-gradient(top, #e8e8e8, #bcbbbc);
+  background-image: linear-gradient(top, #e8e8e8, #bcbbbc);
+  box-shadow: inset rgba(255, 255, 255, 0.7) 0px 1px 1px;
+  border-bottom: #6a6a6a 1px solid; }
+
+.text-body {
+  height: 300px;
+  background-color: rgba(0, 0, 0, 0.85) !important;
+  padding: 10px;
+  color: #f0f0f0 !important;
+  text-shadow: #000 0px 1px 0px;
+  font-family: "Consolas", "Courier New", "Courier";
+  font-size: 1.75em;
+  line-height: 1.40em;
+  font-weight: 500;
+  text-align: left;
+  overflow: hidden;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -ms-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+  word-wrap: break-word; }
+
+#home .masthead .information .text-editor-wrap .text-body p {
+  font-size: 0.7em;
+}
+
+#home .typed-cursor {
+  opacity: 1;
+  font-weight: 100;
+  -webkit-animation: blink 0.7s infinite;
+  -moz-animation: blink 0.7s infinite;
+  -ms-animation: blink 0.7s infinite;
+  -o-animation: blink 0.7s infinite;
+  animation: blink 0.7s infinite;
+}
+
+#home .text-body .typed-cursor {
+  color: #F3F3F3;
+}
+
+code {
+  font-size: 13px;
+  padding: 1px 5px 1px 5px;
+  white-space: pre-wrap;
+  font-family: Consolas,Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace,sans-serif;
+  background-color: #eee;
+}
+pre {
+  word-wrap: normal;
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+  margin-top: 0;
+  margin-bottom: 15px;
+  font: 14px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  box-sizing: border-box;
+  white-space: pre;
+}
+
+@-keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+@-webkit-keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+@-moz-keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+@-ms-keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+@-o-keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
